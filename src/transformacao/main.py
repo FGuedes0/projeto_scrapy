@@ -32,7 +32,7 @@ df["old_price"] = df["old_price_reais"] + df["old_price_cents"] / 100
 df["new_price"] = df["new_price_reais"] + df["new_price_cents"] / 100
 
 #remover as colunas antigas de preço
-df.drop(columns=["old_price_reais","old_price_cents","new_price_reais","new_price_cents"])
+df.drop(columns=['old_price_reais', 'old_price_cents', 'new_price_reais', 'new_price_cents'], inplace=True)
 
 #conectar a um banco de dados SQLite ou cirar um novo
 conn = sqlite3.connect("../data/quotes.db")
@@ -45,4 +45,3 @@ conn.close()
 
 
 print(df.head())
-
