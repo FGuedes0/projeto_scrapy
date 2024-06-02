@@ -1,3 +1,3 @@
 # projeto_scrapy
--Só os loucos sabem
--ticpow ticpei
+- Só os loucos sabem
+- tic pow tic prei
