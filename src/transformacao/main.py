@@ -2,15 +2,16 @@ import pandas as pd
 import sqlite3
 from datetime import datetime
 
+#Definir o caminho para o arquivo JSONL
+df = pd.read_json("../data/data.jsonl", lines=True)
+
 #setar o pandas para mostrar todas as colunas
 pd.options.display.max_columns = None
 
-#Definir o caminho para o arquivo JSONL
-caminho = "../data/data.jsonl"
-df = pd.read_json(caminho, lines=True)
-
 #adicionar coluna _source com um valor fixo
 df["_source"] = "https://lista.mercadolivre.com.br/tenis-corrida-masculino"
+
+# Adicionar a coluna _data_coleta com a data e hora atuais
 df["_data_coleta"] = datetime.now()
 
 #tratar os valores nulos para colunas numéricas e texto
