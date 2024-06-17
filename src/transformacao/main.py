@@ -21,7 +21,7 @@ df["new_price_reais"] = df["new_price_reais"].fillna(0).astype(float)
 df["new_price_cents"] = df["new_price_cents"].fillna(0).astype(float)
 df["reviews_rating_number"] = df["reviews_rating_number"].fillna(0).astype(float)
 
-
+#
 #remover parenteses do reviews_amount
 
 df["reviews_amount"] = df["reviews_amount"].str.replace("[\(\)]", "", regex=True)

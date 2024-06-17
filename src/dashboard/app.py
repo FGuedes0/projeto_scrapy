@@ -48,6 +48,7 @@ average_price_by_brand = df_non_zero_prices.groupby('brand')['new_price'].mean()
 col1.bar_chart(average_price_by_brand)
 col2.write(average_price_by_brand)  
 
+#
 # Qual a satisfação por marca
 st.subheader('Satisfação por marca')
 col1, col2 = st.columns([4, 2])
