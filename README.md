@@ -16,6 +16,6 @@
 - para rodar o streamlit:
 
 ```bash
-    streamlit rum dashboar/app.py
+    streamlit run dashboar/app.py
 ```
 
